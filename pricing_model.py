@@ -1,5 +1,5 @@
 import pandas as pd
-from pandasgui import show
+#from pandasgui import show
 from Inventory import Car, classify_make, classify_model, inventory
 
 # we give this model something that looks like 
