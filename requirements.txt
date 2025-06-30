@@ -35,11 +35,6 @@ pydantic==2.11.7
 pydantic_core==2.33.2
 Pygments==2.19.2
 pynput==1.8.1
-pyobjc-core==11.1
-pyobjc-framework-ApplicationServices==11.1
-pyobjc-framework-Cocoa==11.1
-pyobjc-framework-CoreText==11.1
-pyobjc-framework-Quartz==11.1
 pyparsing==3.2.3
 PyQt5==5.15.11
 PyQt5-Qt5==5.15.17
