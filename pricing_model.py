@@ -5,8 +5,10 @@ from Inventory import Car, classify_make, classify_model, inventory
 # we give this model something that looks like 
 # {make = , model = , mileage = , start_date = , end_date = }}
 
-#for each day the car is rented:
-#    run rental_price function
+
+#need to update the lists with new car types
+
+
 
 
 
@@ -47,6 +49,7 @@ def rental_price(car, date):
 def total_price(car):
     total = 0
     mpg_multiplier = 1.0
+
     
     rental_days = pd.date_range(start = car.start_date, end = car.end_date)
 
@@ -64,7 +67,22 @@ def total_price(car):
         elif car.model_class == 'Sedan' or car.model_class == 'Coupe':
             if car.mpg > 35:
                 mpg_multiplier = 1.15
-    
+    elif car.fuel_type == 'hybrid':
+        if car.range == "None":
+            if car.model_class == 'SUV' or car.model_class == 'Truck':
+                if car.mpg > 36:
+                    mpg_multiplier = 1.15
+            elif car.model_class == 'Sedan' or car.model_class == 'Coupe':
+                if car.mpg > 45:
+                    mpg_multiplier = 1.15
+        elif car.range != "None":
+            if car.model_class == 'SUV' or car.model_class == 'Truck':
+                if car.mpg > 29:
+                    mpg_multiplier = 1.15
+            elif car.model_class == 'Sedan' or car.model_class == 'Coupe':
+                if car.mpg > 40:
+                    mpg_multiplier = 1.15
+
     total *= mpg_multiplier
 
     return round(total, 2)
