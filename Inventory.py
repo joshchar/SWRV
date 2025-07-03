@@ -339,7 +339,7 @@ raw_inventory = [
     "start_date" : "8/6/2025",
     "end_date" : "8/11/2025",
     "fuel_type" : "gas",
-    "mpg" : 31,
+    "mpg" : 27,
     "range" : None,
     "num_seats": 5,
     "drive_train": "AWD",
