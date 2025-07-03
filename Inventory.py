@@ -27,13 +27,16 @@ class Car(BaseModel):
     transmission: str
 
 
-make_standard = ['Toyota', 'Honda', 'Jeep']
-make_luxury =  ['BMW', 'Mercedes', 'Audi', 'Tesla']
-make_premium = ['Porsche', 'Lamborghini', 'Ferrari']
+#should maybe add a way to differentiate full size and compact SUVs
 
-model_coupe = ['TT', 'GR86', 'Genesis']
-model_sedan = ['Civic', 'Model 3', 'Camry']
-model_suv = ['X5', 'Rav4', 'Wrangler']
+
+make_standard = ['Toyota', 'Honda', 'Jeep', 'Nissan', 'Hyundai', 'Subaru', 'Mazda', 'Volkswagen', 'Ford', 'Chevrolet', 'Volvo']
+make_luxury =  ['BMW', 'Mercedes-Benz', 'Audi', 'Tesla', 'Infiniti','Lexus', 'Acura', 'Lincoln', 'Cadillac', 'Jaguar', 'Genesis']
+make_premium = ['Porsche', 'Lamborghini', 'Ferrari', 'Land Rover']
+
+model_coupe = ['TT', 'GR86', 'Genesis', 'Mustang']
+model_sedan = ['Civic', 'Model 3', 'Camry', 'Altima', 'A4', 'C-Class']
+model_suv = ['X5', 'Rav4', 'Wrangler', 'Tuscon', 'Outback', 'CX-5', 'Atlas', 'QX-50', 'RX', 'MDX', 'Range Rover Evoque', 'Aviator', 'XT6', 'F-Pace', 'Tahoe', 'G90', 'Macan']
 model_truck = ['F150', 'Tacoma', 'Silverado']
 
 def classify_make(make: str) -> str:
