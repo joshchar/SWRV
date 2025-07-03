@@ -28,7 +28,9 @@ def rental_price(car, date):
 
     if car.model_class in ['Sedan', 'Coupe']:
         current_price = base_price
-    elif car.model_class in ['SUV', 'Truck']:
+    elif car.model_class in ['Hatchback', 'Compact_SUV']:
+        current_price = base_price + 5
+    elif car.model_class in ['Full_SUV', 'Truck']:
         current_price = base_price + 10
     
 

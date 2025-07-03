@@ -35,9 +35,12 @@ make_luxury =  ['BMW', 'Mercedes-Benz', 'Audi', 'Tesla', 'Infiniti','Lexus', 'Ac
 make_premium = ['Porsche', 'Lamborghini', 'Ferrari', 'Land Rover']
 
 model_coupe = ['TT', 'GR86', 'Genesis', 'Mustang']
-model_sedan = ['Civic', 'Model 3', 'Camry', 'Altima', 'A4', 'C-Class']
-model_suv = ['X5', 'Rav4', 'Wrangler', 'Tuscon', 'Outback', 'CX-5', 'Atlas', 'QX-50', 'RX', 'MDX', 'Range Rover Evoque', 'Aviator', 'XT6', 'F-Pace', 'Tahoe', 'G90', 'Macan']
+model_sedan = ['Civic', 'Model 3', 'Camry', 'Altima', 'A4', 'C-Class', 'G90']
+model_full_suv = ['X5', 'Wrangler', 'Atlas', 'RX', 'MDX', 'Aviator', 'XT6', 'F-Pace', 'Tahoe']
 model_truck = ['F150', 'Tacoma', 'Silverado']
+model_hatchback = ['Outback']
+model_compact_suv = ['Rav4', 'CX-5', 'QX-50', 'Tuscon', 'Range Rover Evoque', 'Macan']
+
 
 def classify_make(make: str) -> str:
     if make in make_standard:
@@ -54,8 +57,12 @@ def classify_model(model: str) -> str:
         return 'Coupe'
     elif model in model_sedan:
         return 'Sedan'
-    elif model in model_suv:
-        return 'SUV'
+    elif model in model_hatchback:
+        return 'Hatchback'
+    elif model in model_compact_suv:
+        return 'Compact_SUV'
+    elif model in model_full_suv:
+        return 'Full_SUV'
     elif model in model_truck:
         return 'Truck'
     else:
